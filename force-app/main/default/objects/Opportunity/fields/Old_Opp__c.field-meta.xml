@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Old_Opp__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field has been used for Flow to Apex case.</description>
+    <externalId>false</externalId>
+    <label>Old Opp</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

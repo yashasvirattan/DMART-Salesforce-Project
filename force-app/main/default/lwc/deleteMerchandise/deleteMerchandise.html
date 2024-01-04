@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Delete Merchandises">
+        <div class="slds-p-around_small">
+            <lightning-datatable
+                key-field="merchproduct.data.Id"
+                data={merchproduct.data}
+                columns={merchproductColumns}
+                onrowselection={getSelectedName}>
+            </lightning-datatable>
+        </div>
+        <lightning-button class="slds-p-around_small" label="Delete Merchandise" onclick={handleDelete}></lightning-button>
+    </lightning-card>
+</template>

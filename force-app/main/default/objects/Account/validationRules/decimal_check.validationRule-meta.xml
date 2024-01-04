@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>decimal_check</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(NumberofLocations__c)),
+    (CONTAINS(TEXT( NumberofLocations__c ), &quot;.&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>NumberofLocations__c</errorDisplayField>
+    <errorMessage>Enter whole number</errorMessage>
+</ValidationRule>

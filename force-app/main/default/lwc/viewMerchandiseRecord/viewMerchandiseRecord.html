@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Merchandises">
+        <div class="slds-p-around_small">
+            <lightning-datatable
+                key-field="merchproduct.data.Id"
+                hide-checkbox-column
+                data={merchproduct.data}
+                columns={merchproductColumns}>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

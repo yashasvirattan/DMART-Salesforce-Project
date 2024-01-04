@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Search Merchandise Record">
+        <div class="slds-p-around_small">
+            <lightning-input type="search" onchange={handleChange} label="Search for Merchandise:"></lightning-input>
+        </div>
+        <lightning-button class="slds-p-around_small" variant="brand" label="Search" onclick={handleClick}></lightning-button>
+    </lightning-card>
+
+    <template if:true={records}>
+        <lightning-card title="Merchandises">
+            <div class="slds-p-around_small">
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+                    <tr style="background-color:lightgray">
+                        <th>Merchandise</th>
+                        <th>Stocks</th>
+                        <th>Price</th>
+                        <th>Country</th>
+                        <th>State</th>
+                    </tr>
+                    <template for:each={records} for:item="record">
+                        <tr key={record.Id}>
+                            <td>{record.Name}</td>
+                            <td>{record.Merchandise_Stock__c}</td>
+                            <td>{record.Merchandise_Price__c}</td>
+                            <td>{record.Merchandise_Country__c}</td>
+                            <td>{record.Merchandise_States__c}</td>
+                        </tr>
+                    </template>
+                </table>
+            </div>
+        </lightning-card>
+    </template>
+</template>
